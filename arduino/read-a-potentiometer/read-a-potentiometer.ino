@@ -16,8 +16,8 @@ void setup() {
 }
 
 void loop() {
-  potentiometer_value = analogRead(POTENTIOMETER); // Read the pot’s value, then...
-  Serial.println(map(analogRead(A2), 0, 674, 60, 90));             // print to the serial monitor.
+  potentiometer_value = analogRead(POTENTIOMETER);     // Read the pot’s value, then...
+  Serial.println(map(analogRead(A2), 0, 674, 60, 90)); // print to the serial monitor.
   
   delay(100);
 }
