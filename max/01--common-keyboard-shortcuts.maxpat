@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -1371.0, 56.0, 841.0, 825.0 ],
+		"rect" : [ -1462.0, 138.0, 841.0, 825.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -189,7 +189,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 434.0, 450.0, 156.0, 64.0 ],
+					"patching_rect" : [ 434.0, 450.0, 150.0, 64.0 ],
 					"text" : "(t) — Create new toggle boxes, which are used to turn on and off objects"
 				}
 
