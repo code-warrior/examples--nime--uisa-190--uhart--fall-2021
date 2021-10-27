@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 42.0, 79.0, 842.0, 395.0 ],
+		"rect" : [ -1886.0, 199.0, 842.0, 395.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -46,7 +46,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 346.0, 234.0, 150.0, 47.0 ],
-					"presentation_linecount" : 3,
 					"text" : "Click the toggle button to see the output in Max’s console window"
 				}
 
@@ -148,7 +147,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 16.0, 14.0, 810.0, 60.0 ],
-					"text" : "Send a Simple Bang Message",
+					"text" : "Send Toggle Messages",
 					"textjustification" : 1
 				}
 
