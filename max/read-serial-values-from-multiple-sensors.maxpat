@@ -45,9 +45,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 659.5, 151.0, 240.0, 100.0 ],
-					"presentation_linecount" : 11,
-					"text" : "This sketch is being developed with the following Arduino sketch, which mimics sending data from two separate sensors. The data for the first sensor, regardless of which type of sensor, is preceeded with an “A” and the second sensor is preceeded by a “B’."
+					"patching_rect" : [ 659.5, 151.0, 241.0, 100.0 ],
+					"text" : "This patch is being developed with the following Arduino sketch, which mimics sending serial data from two separate sensors. The data for the first sensor, regardless of which type of sensor, is preceeded with an “A” and the second sensor is preceeded by a “B’."
 				}
 
 			}
@@ -60,7 +59,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 659.5, 258.5, 240.0, 265.0 ],
-					"presentation_linecount" : 36,
 					"text" : "#define BAUD_RATE 9600\n#define SECOND    1000\n\nvoid setup() {\n  Serial.begin(BAUD_RATE);\n  randomSeed(random(0,100));\n}\n\nvoid loop() {\n  Serial.print(\"A\");\n  Serial.print(random(0,100));\n  Serial.print(random(0,100));\n\n  Serial.print(\"B\");\n  Serial.print(random(0,100));\n  Serial.println(random(0,100));\n\n  delay(5 * SECOND);\n}"
 				}
 
