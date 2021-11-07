@@ -2,11 +2,11 @@
  * Read Analog Values From a 10K Potentiometer
  * ----------------------------------------------------------------------------------
  *
- * Read the values from a 10K potentiometer, or pot, connected to analog pin 2. Make
+ * Read the values from a 10K potentiometer, or pot, connected to analog pin A2. Make
  * sure to open Arduino’s Serial Monitor: Tools | Serial Monitor
  */
 
-#define POTENTIOMETER 2      // Connect the potentiometer — or pot — to analog PIN 2.
+#define POTENTIOMETER A2     // Connect the potentiometer — or pot — to analog PIN A2.
 #define BAUD_RATE     9600   // Set baud rate used by the serial connection to 9600.
 
 int potentiometer_value = 0; // Hold the value read from the pot.
