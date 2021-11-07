@@ -191,8 +191,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 252.333328247070312, 336.0, 53.0, 22.0 ],
-					"text" : "zl group"
+					"patching_rect" : [ 252.333328247070312, 336.0, 75.0, 22.0 ],
+					"text" : "zl group 100"
 				}
 
 			}
