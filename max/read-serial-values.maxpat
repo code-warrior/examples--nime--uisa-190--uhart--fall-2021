@@ -40,6 +40,41 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-5",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 271.433319091796875, 756.0, 254.0, 22.0 ],
+					"text" : "print \"Arduino’s value as a number\" @popup 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Courier New",
+					"id" : "obj-31",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 694.0, 90.833335876464844, 392.0, 20.0 ],
+					"text" : "arduino/read-a-potentiometer/read-a-potentiometer.ino"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-8",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 694.0, 43.333335876464844, 204.0, 47.0 ],
+					"text" : "Note: This patch has been developed with the following Arduino sketch in our examples repo:"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-36",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -184,7 +219,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 41.449951171875, 667.1666259765625, 177.0, 87.0 ],
+					"patching_rect" : [ 41.449951171875, 667.1666259765625, 183.0, 87.0 ],
 					"text" : "Connect the outlets of “itoa” and “fromsymbol” to “typeroute”’s inlet and note in the console window the different types for what appears to be the same value."
 				}
 
@@ -232,8 +267,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 327.14996337890625, 745.46661376953125, 357.0, 24.0 ],
-					"text" : "The final converted output from Arduino that is usable in Max"
+					"patching_rect" : [ 327.14996337890625, 804.46661376953125, 334.0, 24.0 ],
+					"text" : "The final output as a number, which is now usable by Max"
 				}
 
 			}
@@ -422,7 +457,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 252.333328247070312, 745.46661376953125, 70.800003051757812, 22.0 ]
+					"patching_rect" : [ 252.333328247070312, 804.46661376953125, 70.800003051757812, 22.0 ]
 				}
 
 			}
@@ -667,7 +702,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 331.333328247070312, 356.26666259765625, 1112.666671752929688, 225.0 ],
+					"patching_rect" : [ 331.333328247070312, 356.26666259765625, 1114.0, 225.0 ],
 					"text" : "Before explaining the select object, we need some context on the numbers 10 and 13. The number 10 is the ASCII equivalent to line feed, abbreviated LF and represented in a string as “\\n”. Similarly, 13 is the ASCII equivalent to carriage return, abbreviated CR and represented as “\\r”. If you’re transmitting serial communication in Arduino using Serial.println(), then LFCR (\\n\\r) are being appended to the tail of each datum sent by Arduino. (Recall that Serial.print() sends data sans a new line, but Serial.println() appends a new line to the end of each datum.) Consider an example.\n\nImagine that your Arduino sketch was programmed to send the number 0 via serial communication: Serial.println(0). Arduino would actually send 0’s ASCII equivalent, 48, then 13 followed by 10. Thus, the final serial transmission would be “481310”, sans quotes. Now, to the select object.\n\nThe select object takes a series of arguments, in this case, 10 and 13, and sends data out each of its three outlets as follows: When a value select receives matches 10, it sends a bang out of its leftmost outlet. When select receives a 13, it sends a bang out its middle outlet. And, finally, when neither 10 or 13 is detected, then whatever is received on its inlet is passed through to the rightmost outlet.\n\nLet’s revisit Serial.println(0), as discussed in the 2nd paragraph. The number 48 (ASCII equivalent to 0) is received by select, and, because it doesn’t match 10 or 13, is repeated out its rightmost outlet.\n\nWhen 13 is received (ASCII representation of \\r), it’s matched, so a bang is sent out select’s middle outlet.\n\nAnd, finally, when 10 (ASCII representation of \\n) is received, it matches, so a bang is sent out select’s leftmost outlet. However, since we don’t care about 10, because the end of the string is announced by the presence of 13, we send a bang out select’s leftmost outlet, but ignore it. (Note that no cord is connected to the leftmost outlet.)"
 				}
 
@@ -780,6 +815,15 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-29", 0 ],
+					"order" : 1,
+					"source" : [ "obj-27", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"order" : 0,
 					"source" : [ "obj-27", 0 ]
 				}
 
