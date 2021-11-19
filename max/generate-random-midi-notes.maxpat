@@ -3,7 +3,7 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 0,
+			"minor" : 2,
 			"revision" : 0,
 			"architecture" : "x64",
 			"modernui" : 1
@@ -37,6 +37,7 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
+		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
 					"bgcolor" : [ 0.592156862745098, 0.52156862745098, 0.701960784313725, 0.1 ],
@@ -74,7 +75,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 368.0, 665.0, 305.0, 31.0 ],
+					"patching_rect" : [ 328.5, 665.0, 305.0, 31.0 ],
 					"text" : "Play the note."
 				}
 
@@ -88,8 +89,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 368.0, 554.0, 305.0, 91.0 ],
-					"text" : "Make a note from the number created by the random object, and have its value dictated by the slider."
+					"patching_rect" : [ 362.0, 554.0, 305.0, 91.0 ],
+					"text" : "Make a note from the number created by the random object, and have its volume dictated by the slider."
 				}
 
 			}
